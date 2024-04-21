@@ -17,10 +17,10 @@ public class GameService {
     private final GameRepository gameRepository;
 
     @Transactional(readOnly = true)
-    public List<GameMinDTO> findAll(String name, String genreId) {
-        Long parsedGenreId = null;
-        if (!genreId.equals("0")) parsedGenreId = Long.parseLong(genreId);
-        List<Game> games = gameRepository.searchByNameAndGenreId(name, parsedGenreId);
+    public List<GameMinDTO> findAll(String name, String genreId, String platformId) {
+        Long parsedGenreId = parseRequestParamToLong(genreId);
+        Long parsedPlatformId = parseRequestParamToLong(platformId);
+        List<Game> games = gameRepository.searchByNameAndGenreIdAndPlatormId(name, parsedGenreId, parsedPlatformId);
         return games.stream().map(GameMinDTO::new).toList();
     }
 
@@ -29,5 +29,11 @@ public class GameService {
         Game game = gameRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Recurso não encontrado"));
         return new GameDTO(game);
+    }
+
+    private Long parseRequestParamToLong(String requestParam) {
+        Long parsedParam = null;
+        if (!requestParam.equals("0")) parsedParam = Long.parseLong(requestParam);
+        return parsedParam;
     }
 }

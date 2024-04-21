@@ -28,4 +28,10 @@ public class Game {
             joinColumns = @JoinColumn(name = "game_id"),
             inverseJoinColumns = @JoinColumn(name = "genre_id"))
     private List<Genre> genres = new ArrayList<>();
+
+    @ManyToMany
+    @JoinTable(name = "game_platform",
+            joinColumns = @JoinColumn(name = "game_id"),
+            inverseJoinColumns = @JoinColumn(name = "platform_id"))
+    private List<Platform> platforms = new ArrayList<>();
 }

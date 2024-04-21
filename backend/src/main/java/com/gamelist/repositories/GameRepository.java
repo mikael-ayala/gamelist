@@ -12,8 +12,11 @@ public interface GameRepository extends JpaRepository<Game, Long> {
             SELECT * FROM game
             INNER JOIN game_genre
             ON game.id = game_genre.game_id
+            INNER JOIN game_platform
+            ON game.id = game_platform.game_id
             WHERE (:genreId IS NULL OR genre_id = :genreId)
+            AND (:platformId IS NULL OR platform_id = :platformId)
             AND LOWER(name) LIKE CONCAT('%', LOWER(:name), '%')
             """)
-    List<Game> searchByNameAndGenreId(String name, Long genreId);
+    List<Game> searchByNameAndGenreIdAndPlatormId(String name, Long genreId, Long platformId);
 }

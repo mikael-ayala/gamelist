@@ -18,9 +18,10 @@ public class GameController {
     @GetMapping
     public ResponseEntity<List<GameMinDTO>> findAll(
             @RequestParam(value = "name", defaultValue = "") String name,
-            @RequestParam(value = "genreId", defaultValue = "0") String genreId
+            @RequestParam(value = "genreId", defaultValue = "0") String genreId,
+            @RequestParam(value = "platformId", defaultValue = "0") String platformId
     ) {
-        List<GameMinDTO> games = gameService.findAll(name, genreId);
+        List<GameMinDTO> games = gameService.findAll(name, genreId, platformId);
         return ResponseEntity.ok(games);
     }
 

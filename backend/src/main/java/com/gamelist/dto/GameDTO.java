@@ -10,7 +10,8 @@ public record GameDTO(
         String description,
         Integer releaseYear,
         String imgUrl,
-        List<GenreDTO> genres
+        List<GenreDTO> genres,
+        List<PlatformDTO> platforms
 ) {
     public GameDTO(Game game) {
         this(game.getId(),
@@ -18,6 +19,7 @@ public record GameDTO(
             game.getDescription(),
             game.getReleaseYear(),
             game.getImgUrl(),
-            game.getGenres().stream().map(GenreDTO::new).toList());
+            game.getGenres().stream().map(GenreDTO::new).toList(),
+            game.getPlatforms().stream().map(PlatformDTO::new).toList());
     }
 }
