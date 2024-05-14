@@ -1,0 +1,128 @@
+.hero {
+    align-items: center;
+    background-image: url(/img/hero-background-banner.png);
+    color: white;
+    height: 469px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.hero .hero-title {
+    font-size: 72px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.hero .hero-subtitle {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 32px;
+}
+
+.search-tab {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-block: 32px;
+}
+
+.form-tab {
+    align-items: center;
+    background-color: var(--red);
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    padding: 16px 32px;
+    width: 100%;
+}
+
+.form {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+}
+
+.form .text-input,
+.form .select-input,
+.form .form-button {
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+.form .text-input {
+    width: 312px;
+}
+
+.form .text-input,
+.form .text-input::placeholder,
+.form .select-input,
+.form .form-button {
+    color: black;
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.form .form-button {
+    background-color: var(--yellow);
+    color: white;
+    font-weight: 800;
+    transition: transform 0.5s;
+}
+
+.form .form-button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.game-list {
+    margin-block: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.cards-list {
+    display: grid;
+    gap: 72px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.card {
+    align-self: center;
+    background-color: var(--red);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    height: 352px;
+    justify-self: center;
+    box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.5s;
+    width: 224px;
+}
+
+.card:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.card img {
+    width: 100%;
+}
+
+.card .text-card {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+}
+
+.card .text-card p {
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+}

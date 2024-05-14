@@ -1,0 +1,9 @@
+:root {
+    --red: #E60012;
+    --yellow: #FFD223;
+    font-family: "Rubik", sans-serif;
+}
+
+.container {
+    width: 1140px;
+}
