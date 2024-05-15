@@ -31,34 +31,22 @@
         <section class="search-tab">
             <div class="container">
                 <div class="form-tab">
-                    <form class="form" action="">
-                        <input class="text-input" type="text" placeholder="Nome" />
-                        <select class="select-input" name="select">
-                            <option value="" selected id="pinto">Categoria...</option>
-                            <option value="valor1">Plataforma</option>
-                            <option value="valor2">Corrida</option>
-                            <option value="valor3">Esportes</option>
+                    <form class="form" action="" id="search-game-form">
+                        <input class="text-input" id="game-name" type="text" placeholder="Nome" />
+                        <select class="select-input" id="select-genre" name="select">
+                            <option value="" selected>Gênero...</option>
                         </select>
-                        <select class="select-input" name="select">
+                        <select class="select-input" id="select-platform" name="select">
                             <option value="" selected>Plataforma...</option>
-                            <option value="" >Playstation</option>
-                            <option value="valor1">Xbox</option>
-                            <option value="valor2">Nintendo</option>
                         </select>
-                        <button class="form-button" type="button">Buscar</button>
+                        <button class="form-button" type="submit">Buscar</button>
                     </form>
                 </div>
             </div>
         </section>
         <section class="game-list">
             <div class="container">
-                <div class="cards-list">
-                    <div class="card">
-                        <img src="/img/mario-kart-8.jpg" />
-                        <div class="text-card">
-                            <p>Mario Kart 8</p>
-                        </div>
-                    </div>
+                <div class="cards-list" id="cards-list">
                 </div>
             </div>
         </section>
@@ -68,5 +56,7 @@
             <img src="img/game-list-logo.jpg" />
         </div>
     </footer>
+
+    <script src="js/load-games.js"></script>
 </body>
 </html>
