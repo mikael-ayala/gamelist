@@ -6,7 +6,7 @@
     width: 100%;
 }
 
-.hero-game-title .game-title {
+.hero-game-title #game-title {
     color: white;
     font-size: 72px;
     font-weight: 500;
@@ -26,14 +26,14 @@
     margin-block: 64px;
 }
 
-.game-info .game-text {
+.game-info #game-text {
     font-size: 24px;
     line-break: 32px;
     line-height: 32px;
     width: 685px;
 }
 
-.game-info .game-card {
+.game-info #game-card {
     background-color: var(--red);
     border-radius: 16px;
     box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2);
@@ -42,39 +42,39 @@
     width: 366px;
 }
 
-.game-info .game-card img {
+.game-info #game-card img {
     width: 100%;
 }
 
-.game-info .game-card .game-card-info {
+.game-info #game-card .game-card-info {
     padding: 16px;
 }
 
-.game-info .game-card .game-card-info hr {
+.game-info #game-card .game-card-info hr {
     margin-left: -16px;
     width: 365px;
 }
 
-.game-info .game-card .game-card-info .specs {
+.game-info #game-card .game-card-info .specs {
     align-items: flex-start;
     display: flex;
     padding-block: 8px;
 }
 
-.game-info .game-card .game-card-info .card-text {
+.game-info #game-card .game-card-info .card-text {
     color: white;
     font-size: 24px;
     font-weight: 500;
     width: 165px;
 }
-.game-info .game-card .game-card-info .specs-info {
+.game-info #game-card .game-card-info .specs-info {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-.game-info .game-card .game-card-info .rounded-card-text,
-.game-info .game-card .game-card-info .specs-info .rounded-card-text {
+.game-info #game-card .game-card-info .rounded-card-text,
+.game-info #game-card .game-card-info .specs-info .rounded-card-text {
     background-color: white;
     color: var(--red);
     font-size: 18px;
