@@ -22,6 +22,7 @@ public class Game {
     private String description;
     private Integer releaseYear;
     private String imgUrl;
+    private String backgroundImgUrl;
 
     @ManyToMany
     @JoinTable(name = "game_genre",

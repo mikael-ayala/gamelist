@@ -4,6 +4,7 @@ const cardGame = document.getElementById('card-game');
 const gameTitle = document.getElementById('game-title');
 const gameCard = document.getElementById('game-card');
 const gameText = document.getElementById('game-text');
+const backgroundHeroImage = document.getElementById('background-image-hero');
 
 async function loadGame() {
     const id = getUrlParam();
@@ -61,4 +62,5 @@ function createGamePage(game) {
     gameCard.innerHTML = createGameCard(game);
     createGameCardSpecs(game);
     gameText.innerHTML = game.description;
+    backgroundHeroImage.style.backgroundImage = `url('${game.backgroundImgUrl}')`;
 }
