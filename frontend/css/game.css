@@ -87,3 +87,44 @@
     padding: 8px 16px;
     width: fit-content;
 }
+
+.game-video {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.game-video .video-content {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+}
+
+.game-video .gameplay-background {
+    align-items: center;
+    background-color: var(--yellow);
+    display: flex;
+    height: 85px;
+    justify-content: center;
+    margin-left: calc((100% - 100vw) / 1.85);
+    width: 100vw;
+}
+
+.game-video .gameplay-background .gameplay-title {
+    color: white;
+    font-size: 72px;
+    font-weight: 500;
+    padding-block: 8px;
+}
+
+.game-video .responsive-iframe-video {
+    height: 80%;
+    margin-top: 64px;
+    position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    width: 100%;
+}
