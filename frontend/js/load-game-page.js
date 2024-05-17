@@ -5,6 +5,7 @@ const gameTitle = document.getElementById('game-title');
 const gameCard = document.getElementById('game-card');
 const gameText = document.getElementById('game-text');
 const backgroundHeroImage = document.getElementById('background-image-hero');
+const gameVideo = document.getElementById('video-content');
 
 async function loadGame() {
     const id = getUrlParam();
@@ -57,10 +58,17 @@ function createGameCardSpecs(game) {
     }
 }
 
+function createGameVideo(game) {
+    return `
+        <iframe class="responsive-iframe-video" src="https://www.youtube.com/embed/${game.videoUrl}" allowfullscreen></iframe>
+    `
+}
+
 function createGamePage(game) {
     gameTitle.innerHTML = game.name;
     gameCard.innerHTML = createGameCard(game);
     createGameCardSpecs(game);
     gameText.innerHTML = game.description;
     backgroundHeroImage.style.backgroundImage = `url('${game.backgroundImgUrl}')`;
+    gameVideo.innerHTML = createGameVideo(game);
 }

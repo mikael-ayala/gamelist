@@ -94,7 +94,7 @@
     justify-content: center;
 }
 
-.game-video .video-content {
+.game-video #video-content {
     position: relative;
     overflow: hidden;
     width: 100%;
