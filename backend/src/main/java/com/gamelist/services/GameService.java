@@ -3,6 +3,7 @@ package com.gamelist.services;
 import com.gamelist.dto.GameDTO;
 import com.gamelist.dto.GameMinDTO;
 import com.gamelist.entities.Game;
+import com.gamelist.projections.GameMinProjection;
 import com.gamelist.repositories.GameRepository;
 import com.gamelist.services.exceptions.ResourceNotFoundException;
 import lombok.RequiredArgsConstructor;
@@ -20,7 +21,7 @@ public class GameService {
     public List<GameMinDTO> findAll(String name, String genreId, String platformId) {
         Long parsedGenreId = parseRequestParamToLong(genreId);
         Long parsedPlatformId = parseRequestParamToLong(platformId);
-        List<Game> games = gameRepository.searchByNameAndGenreIdAndPlatormId(name, parsedGenreId, parsedPlatformId);
+        List<GameMinProjection> games = gameRepository.searchByNameAndGenreIdAndPlatormId(name, parsedGenreId, parsedPlatformId);
         return games.stream().map(GameMinDTO::new).toList();
     }
 

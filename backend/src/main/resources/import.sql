@@ -11,6 +11,7 @@ INSERT INTO game(id, name, description, release_year, img_url, background_img_ur
 
 INSERT INTO game_genre(game_id, genre_id) VALUES (1, 1);
 INSERT INTO game_genre(game_id, genre_id) VALUES (2, 1);
+INSERT INTO game_genre(game_id, genre_id) VALUES (2, 2);
 
 INSERT INTO game_platform(game_id, platform_id) VALUES (1, 1);
 INSERT INTO game_platform(game_id, platform_id) VALUES (2, 2);

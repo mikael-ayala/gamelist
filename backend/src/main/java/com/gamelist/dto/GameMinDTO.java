@@ -1,9 +1,10 @@
 package com.gamelist.dto;
 
 import com.gamelist.entities.Game;
+import com.gamelist.projections.GameMinProjection;
 
 public record GameMinDTO(Long id, String name, String imgUrl) {
-    public GameMinDTO(Game game) {
-        this(game.getId(), game.getName(), game.getImgUrl());
+    public GameMinDTO(GameMinProjection gameMinProjection) {
+        this(gameMinProjection.getId(), gameMinProjection.getName(), gameMinProjection.getImage());
     }
 }
