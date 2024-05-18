@@ -67,9 +67,9 @@
 
 .game-info #game-card .game-card-info .card-text {
     color: white;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 500;
-    width: 165px;
+    width: 145px;
 }
 .game-info #game-card .game-card-info .specs-info {
     display: flex;
@@ -81,7 +81,7 @@
 .game-info #game-card .game-card-info .specs-info .rounded-card-text {
     background-color: white;
     color: var(--red);
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 800;
     border-radius: 32px;
     padding: 8px 16px;
