@@ -8,7 +8,7 @@
 # Diagrama de Classes
 
 <div align="center">
-  
-  ![class-diagram](https://github.com/mikael-ayala/gamelist/assets/106713704/739d803c-d077-46e5-9f37-6aecbaa4c09c)
+
+  ![class-diagram](https://github.com/mikael-ayala/gamelist/assets/106713704/d32bac9a-14d7-419c-b9d0-b87ff993e366)
 
 </div>
