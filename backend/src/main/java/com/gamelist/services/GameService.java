@@ -21,7 +21,7 @@ public class GameService {
     public List<GameMinDTO> findAll(String name, String genreId, String platformId) {
         Long parsedGenreId = parseRequestParamToLong(genreId);
         Long parsedPlatformId = parseRequestParamToLong(platformId);
-        List<GameMinProjection> games = gameRepository.searchByNameAndGenreIdAndPlatormId(name, parsedGenreId, parsedPlatformId);
+        List<GameMinProjection> games = gameRepository.searchByNameAndGenreIdAndPlatformId(name, parsedGenreId, parsedPlatformId);
         return games.stream().map(GameMinDTO::new).toList();
     }
 

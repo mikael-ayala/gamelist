@@ -20,5 +20,5 @@ public interface GameRepository extends JpaRepository<Game, Long> {
             AND (:platformId IS NULL OR platform_id = :platformId)
             AND LOWER(name) LIKE CONCAT('%', LOWER(:name), '%')
             """)
-    List<GameMinProjection> searchByNameAndGenreIdAndPlatormId(String name, Long genreId, Long platformId);
+    List<GameMinProjection> searchByNameAndGenreIdAndPlatformId(String name, Long genreId, Long platformId);
 }
