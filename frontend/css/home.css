@@ -20,11 +20,46 @@
     line-height: 32px;
 }
 
+
+.insert-form,
 .search-tab {
     align-items: center;
     display: flex;
     justify-content: center;
     margin-block: 32px;
+}
+
+.form-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.insert-form-tab {
+    align-items: center;
+    background-color: var(--red);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    padding: 16px 32px;
+    width: fit-content;
+}
+
+.div-checkbox {
+    display: flex;
+    justify-content: space-evenly;
+    margin-block: 16px;
+    width: 100%;
+}
+
+.div-checkbox fieldset legend {
+    color: var(--yellow);
+}
+
+.div-checkbox fieldset {
+    color: white;
 }
 
 .form-tab {
@@ -44,6 +79,8 @@
     gap: 32px;
 }
 
+.insert-form-button,
+.insert-form-tab .text-input,
 .form .text-input,
 .form .select-input,
 .form .form-button {
@@ -52,10 +89,14 @@
     padding: 8px 16px;
 }
 
+.insert-form-tab .text-input,
 .form .text-input {
     width: 312px;
 }
 
+.insert-form-button,
+.insert-form-tab .text-input,
+.insert-form-tab .text-input::placeholder,
 .form .text-input,
 .form .text-input::placeholder,
 .form .select-input,
@@ -66,6 +107,7 @@
     font-weight: 400;
 }
 
+.insert-form-button,
 .form .form-button {
     background-color: var(--yellow);
     color: white;
@@ -73,6 +115,7 @@
     transition: transform 0.5s;
 }
 
+.insert-form-button:hover,
 .form .form-button:hover {
     cursor: pointer;
     transform: scale(1.1);

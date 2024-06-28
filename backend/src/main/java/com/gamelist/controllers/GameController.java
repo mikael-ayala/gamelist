@@ -30,4 +30,10 @@ public class GameController {
         GameDTO game = gameService.findById(id);
         return ResponseEntity.ok(game);
     }
+
+    @PostMapping
+    public ResponseEntity<GameDTO> save(@RequestBody GameDTO body) {
+        GameDTO game = gameService.save(body);
+        return ResponseEntity.ok(game);
+    }
 }
